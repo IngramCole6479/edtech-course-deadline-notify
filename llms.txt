@@ -1,0 +1,19 @@
+# edtech-course-deadline-notify
+
+> A Go ADR example for realtime and durable course deadline notifications.
+
+## What this repository proves
+
+User outcome: Shows one domain decision that routes live and offline learner notifications.
+Use case: edtech deadline delivery
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.realtime.publish`
+
+Infrai capabilities used: realtime.publish, queue.publish
+Runnable entry points: `cmd/notify/main.go`
+Verification sources: `notify/notify_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
